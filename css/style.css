@@ -21,8 +21,12 @@ a {
 }
 
 p {
-    letter-spacing: .8px;
+    letter-spacing: 0.05rem;
     line-height: 1.3;
+}
+
+ul {
+    list-style: none;
 }
 
 .title {
@@ -36,6 +40,18 @@ p {
 
 .title span {
     font-weight: bold;
+}
+
+.btn {
+    background-image: var(--gradient);
+    color: var(--white);
+    border-radius: 5px;
+    padding: 15px 13px;
+    display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
 }
 
 .small-font {
@@ -52,6 +68,79 @@ p {
     display: grid;
     grid-template-columns: 1fr 100px minmax(300px, 950px) 1fr;
 }
+
+/* HEADER */
+.header {
+    grid-column: 2 / 5;
+    display: flex;
+    margin-top: 1.875rem;
+}
+
+.header .menu {
+    align-items: center;
+    background: var(--black);
+    border-radius: 7px 0 0 7px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: 0;
+    padding-right: 10px;
+    width: 70%;
+}
+
+.header .menu ul {
+    display: flex;
+    margin-left: 2.5rem;
+}
+
+.header .menu ul li + li {
+    margin-left: 2.5rem;
+}
+
+.header .menu ul a {
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 1px;
+    padding: 13px 10px;
+    text-transform: uppercase;
+}
+
+.header .btn {
+    font-size: 11px;
+}
+
+/* HOME BANNER */
+.home-banner {
+    display: grid;
+    grid-column: 2 / 4;
+    grid-template-columns: 1fr 1.5fr;
+    min-height: 87vh;
+}
+
+.home-banner > div {
+    display: flex;
+}
+
+.home-banner-text {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.home-banner-img {
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
 
 
 
