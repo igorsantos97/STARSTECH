@@ -29,6 +29,11 @@ ul {
     list-style: none;
 }
 
+img {
+    display: block;
+    max-width: 100%;
+}
+
 .title {
     font-family: Helvetica, sans-serif;
     font-size: 4rem;
@@ -40,6 +45,7 @@ ul {
 
 .title span {
     font-weight: bold;
+    display: block;
 }
 
 .medium-title {
@@ -279,3 +285,47 @@ ul {
 .about-info-tabnav img {
     width: 40px;
 }
+
+/* PROCESS */
+.process {
+    padding-bottom: 5rem;
+}
+
+.process h2 {
+    grid-column: 2 / 4;
+}
+
+.process h3 {
+    height: 20px;
+    margin-bottom: .5rem;
+    margin-top: 1rem;
+}
+
+.process > div {
+    grid-column: 3 / 4;
+}
+
+.process-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+
+.process-box {
+    text-align: center;
+    width: calc(100% / 3 - 30px);
+}
+
+.process-box img {
+    height: 200px;
+    margin: 0 auto !important;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
