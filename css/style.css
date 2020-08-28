@@ -345,6 +345,11 @@ img {
     grid-column: 2 / 4;
 }
 
+.our-services .btn {
+    background: var(--black);
+    margin: 0px auto 10px !important;
+}
+
 .our-services .grid-container h2,
 .our-services .grid-container > div {
     color: var(--white);
@@ -367,7 +372,7 @@ img {
     width: calc(100% / 3 - 30px);
 }
 
-.our-services-box:nth-child(-n+3) {
+.our-services-box {
     margin-bottom: 4rem !important;
 }
 
@@ -380,4 +385,7 @@ img {
     margin-bottom: 10px;
     margin-top: 16px;
 }
+
+
+
 
