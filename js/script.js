@@ -25,22 +25,25 @@ function activeNavTab() {
     }
 }
 
-const accordionList = document.querySelectorAll('.js-accordion dt');
+function accordionList() {
+    const accordionList = document.querySelectorAll('.js-accordion dt');
 
-if (accordionList.length) {
-    const active = 'active';
+    if (accordionList.length) {
+        const active = 'active';
 
-    accordionList[0].classList.add(active);
-    accordionList[0].nextElementSibling.classList.add(active);
+        accordionList[0].classList.add(active);
+        accordionList[0].nextElementSibling.classList.add(active);
 
-    function toggleAccordionList() {
-        this.classList.toggle(active);
-        this.nextElementSibling.classList.toggle(active);
+        function toggleAccordionList() {
+            this.classList.toggle(active);
+            this.nextElementSibling.classList.toggle(active);
+        }
+
+        accordionList.forEach((item) => {
+            item.addEventListener('click', toggleAccordionList);
+        });
     }
-
-    accordionList.forEach((item) => {
-        item.addEventListener('click', toggleAccordionList);
-    });
 }
 
 activeNavTab();
+accordionList();

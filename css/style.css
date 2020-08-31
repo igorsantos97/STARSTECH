@@ -426,6 +426,10 @@ img {
     margin-bottom: 5px;
 }
 
+.faq-items dd + dt {
+    margin-top: 2rem;
+}
+
 .faq-items dt::before {
     background: -webkit-linear-gradient(#8e70fc, #ab62f3);
     content: '';
