@@ -263,7 +263,6 @@ img {
 }
 
 .about-info-tabnav li {
-    cursor: pointer;
     display: flex;
 }
 
@@ -496,6 +495,11 @@ img {
 }
 
 /* ACTIVE JS */
+/* Navtabs */
+.js .about-info-tabnav li {
+    cursor: pointer;
+}
+
 .js .about-info-text p {
     display: none;
     animation: toRight .3s forwards;
