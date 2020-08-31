@@ -252,6 +252,10 @@ img {
     font-weight: bold;
 }
 
+.about-info-text p {
+    margin-bottom: 20px;
+}
+
 .about-info-tabnav {
     display: flex;
     margin-top: 4rem !important;
@@ -489,6 +493,28 @@ img {
     letter-spacing: 1px;
     padding: 34px;
     text-align: right;
+}
+
+/* ACTIVE JS */
+.js .about-info-text p {
+    display: none;
+    animation: toRight .3s forwards;
+}
+
+.js .about-info-text p.active {
+    display: block;
+}
+
+@keyframes toRight {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    
+    to {
+        opacity: 1;
+        transform: translateX(-30px);
+    }
 }
 
 @media only screen and (max-width: 549px) {
