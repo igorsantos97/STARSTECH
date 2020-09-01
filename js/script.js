@@ -46,29 +46,28 @@ function accordionList() {
 }
 
 function SmoothScroll() {
+    const links = document.querySelectorAll('.js-link-smooth');
 
-}
+    function activeSmoothScroll(e) {
+        e.preventDefault();
 
-const links = document.querySelectorAll('.js-link-smooth');
+        const href = e.target.getAttribute('href');
+        const section = document.querySelector(href);
 
-function activeSmoothScroll(e) {
-    e.preventDefault();
+        section.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
 
-    const href = e.target.getAttribute('href');
-    const section = document.querySelector(href);
 
+    }
 
-    section.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
+    links.forEach((link) => {
+        link.addEventListener('click', activeSmoothScroll);
     });
-
-
 }
 
-links.forEach((link) => {
-    link.addEventListener('click', activeSmoothScroll);
-});
 
+SmoothScroll();
 activeNavTab();
 accordionList();
