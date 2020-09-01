@@ -68,6 +68,32 @@ function SmoothScroll() {
 }
 
 
+function animaScroll() {
+    const sections = document.querySelectorAll('.js-section-scroll');
+    const windowHalf = window.innerHeight * 0.7;
+
+    if (sections.length) {
+        animaSection();
+
+        function animaSection() {
+
+            sections.forEach((section) => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const sectionVisible = (sectionTop - windowHalf) < 0;
+
+                if (sectionVisible) {
+                    section.classList.add('active');
+                } else {
+                    section.classList.remove('active');
+                }
+            });
+        }
+        window.addEventListener('scroll', animaSection);
+    }
+}
+
+
 SmoothScroll();
 activeNavTab();
 accordionList();
+animaScroll();

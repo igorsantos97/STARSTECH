@@ -564,6 +564,17 @@ img {
     }
 }
 
+/* Anima Scroll */
+.js .anima-section {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: .3s;
+}
+
+.js .anima-section.active {
+    opacity: 1;
+    transform: translateX(0px);
+}
 
 @media only screen and (max-width: 549px) {
     .title {
